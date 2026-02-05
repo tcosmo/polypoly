@@ -87,6 +87,8 @@ dmypy.json
 .DS_Store
 Thumbs.db
 
+
+
 # Azure Functions
 local.settings.json
 .python_packages/

@@ -170,7 +170,7 @@ except Exception as e:
             time.sleep(wait_time)
 
         url = f"{POLYMARKET_API_BASE}/events"
-        params = {"ascending": "true", "limit": limit, "offset": offset}
+        params = {"order": "creationDate", "ascending": "true", "limit": limit, "offset": offset}
 
         self._vlog(f"Fetching {url} with offset={offset}, limit={limit}")
         start = time.time()

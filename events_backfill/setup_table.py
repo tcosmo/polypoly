@@ -147,6 +147,44 @@ except Exception as e:
     print(f"Prefilled {num_jobs} jobs")
 
 
+def reset_all_jobs():
+    """Reset all jobs to initial pending state (no errors, no progress)."""
+    client = get_delta_client()
+
+    count = get_row_count()
+    print(f"Resetting {count} jobs to initial state...")
+
+    code = f'''
+from delta.tables import DeltaTable
+from datetime import datetime
+
+path = "{JOBS_TABLE_PATH}"
+now = datetime.utcnow()
+
+delta_table = DeltaTable.forPath(spark, path)
+delta_table.update(
+    condition="1=1",  # all rows
+    set={{
+        "state": "'pending'",
+        "leased_by": "NULL",
+        "lease_expires_at": "NULL",
+        "attempts": "0",
+        "next_attempt_at": f"timestamp'{{now}}'",
+        "last_error_code": "NULL",
+        "last_error_message": "NULL",
+        "last_error_at": "NULL",
+        "done_at": "NULL",
+        "payload_path": "NULL",
+        "records_written": "NULL",
+        "updated_at": "current_timestamp()"
+    }}
+)
+print(f"Reset complete")
+'''
+    result = client.run_delta_operation(code, timeout_seconds=300)
+    print(f"Result: {result}")
+
+
 def main():
     print("Setting up events backfill jobs table...")
 
@@ -157,4 +195,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "reset":
+        reset_all_jobs()
+    else:
+        main()

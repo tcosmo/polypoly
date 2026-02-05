@@ -25,7 +25,7 @@ CONTAINER = "polypoly"
 # Bronze path template
 BRONZE_PATH_TEMPLATE = (
     "bronze/polymarket/events/mode=backfill/ingest_date={ingest_date}/"
-    "offset={offset:05d}_limit={limit}.jsonl"
+    "offset={offset:010d}_limit={limit}.jsonl"
 )
 
 # Delta table path (direct path, no metastore)

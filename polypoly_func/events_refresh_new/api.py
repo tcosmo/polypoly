@@ -1,6 +1,7 @@
 """
 Polymarket API client for fetching events.
 """
+
 import logging
 import time
 from typing import Optional
@@ -33,7 +34,7 @@ class PolymarketAPIClient:
             time.sleep(wait_time)
 
         url = f"{POLYMARKET_API_BASE}/events"
-        params = {"ascending": "true", "limit": limit, "offset": offset}
+        params = {"order": "creationDate", "ascending": "true", "limit": limit, "offset": offset}
 
         logger.debug(f"Fetching offset={offset} limit={limit}")
         start = time.time()
@@ -46,7 +47,9 @@ class PolymarketAPIClient:
             return [], f"REQUEST_ERROR:{str(e)[:100]}"
 
         fetch_time = time.time() - start
-        logger.debug(f"API response: status={response.status_code} time={fetch_time:.2f}s size={len(response.content)}B")
+        logger.debug(
+            f"API response: status={response.status_code} time={fetch_time:.2f}s size={len(response.content)}B"
+        )
 
         if response.status_code == 429:
             retry_after = response.headers.get("Retry-After", "60")

@@ -35,5 +35,5 @@ BRONZE_CONTAINER = os.environ.get("BRONZE_CONTAINER", CONTAINER)
 BRONZE_PATH_PREFIX = "bronze/" if ADLS_ACCOUNT_NAME_BRONZE == ADLS_ACCOUNT_NAME else ""
 BRONZE_PATH_TEMPLATE = (
     BRONZE_PATH_PREFIX + "polymarket/events/mode=refresh_new/ingest_date={ingest_date}/"
-    "offset={offset:05d}_limit={limit}_{time}.jsonl"
+    "offset={offset:010d}_limit={limit}_{time}.jsonl"
 )
