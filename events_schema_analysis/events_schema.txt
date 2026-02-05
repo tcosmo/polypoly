@@ -1,0 +1,524 @@
+Entity counts:
+  Events:         189,782
+  Markets:        442,877 (441,417 unique)
+  Series:         167,609 (908 unique)
+  Tags:           1,151,778 (4,737 unique)
+  Categories:     0
+  Collections:    0
+  Chats:          0
+  EventCreators:  127 (37 unique)
+  Templates:      0
+  ImageOptimized: 0
+
+================================================================================
+ EVENT SCHEMA (189782 records analyzed)
+================================================================================
+
+ALWAYS PRESENT (100%)
+------------------------------------------------------------
+  id                                            100.0%  [str:189782] e.g. 4870
+  slug                                          100.0%  [str:189782] e.g. will-kim-kardashian-and-kanye-west-divorce-before-
+  title                                         100.0%  [str:189782] e.g. What will the price of Bitcoin be on November 4th,
+  image                                         100.0%  [str:189782] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  icon                                          100.0%  [str:189782] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  active                                        100.0%  [bool:189782] e.g. True
+  closed                                        100.0%  [bool:189782] e.g. False
+  createdAt                                     100.0%  [str:189782] e.g. 2022-07-27T14:41:18.866Z
+  cyom                                          100.0%  [bool:189782] e.g. False
+  showAllOutcomes                               100.0%  [bool:189782] e.g. False
+  showMarketImages                              100.0%  [bool:189782] e.g. False
+  enableNegRisk                                 100.0%  [bool:189782] e.g. False
+  negRiskAugmented                              100.0%  [bool:189782] e.g. False
+  pendingDeployment                             100.0%  [bool:189782] e.g. False
+  deploying                                     100.0%  [bool:189782] e.g. False
+  requiresTranslation                           100.0%  [bool:189782] e.g. False
+  ticker                                        100.0%  [str:189780] e.g. will-kim-kardashian-and-kanye-west-divorce-before-
+  tags                                          100.0%  [array:189778] e.g. len=3
+  archived                                      100.0%  [bool:189744] e.g. False
+  restricted                                    100.0%  [bool:189744] e.g. False
+  markets                                       100.0%  [array:189744] e.g. len=3
+  featured                                      100.0%  [bool:189728] e.g. False
+  new                                           100.0%  [bool:189714] e.g. False
+  updatedAt                                     100.0%  [str:189697] e.g. 2024-04-25T19:57:53.317939Z
+  startDate                                      99.9%  [str:189678] e.g. 2020-10-12T00:00:00Z
+  endDate                                        99.9%  [str:189600] e.g. 2022-03-01T00:00:00Z
+
+COMMON (90-99%)
+------------------------------------------------------------
+  creationDate                                   99.8%  [str:189315] e.g. 2020-10-12T00:00:00Z
+  description                                    99.6%  [str:189070] e.g. This is a scalar market on what the USD price of B
+  commentCount                                   99.5%  [int:188859] e.g. 0
+  openInterest                                   99.1%  [int:188129] e.g. 0
+  enableOrderBook                                98.3%  [bool:186631] e.g. False
+  closedTime                                     96.6%  [str:183301] e.g. 2022-07-27T14:41:18.866Z
+  automaticallyResolved                          93.6%  [bool:177655] e.g. True
+  negRisk                                        92.5%  [bool:175460] e.g. False
+  resolutionSource                               91.8%  [str:174254] e.g. coingecko.com
+
+FREQUENT (50-89%)
+------------------------------------------------------------
+  seriesSlug                                     88.3%  [str:167657] e.g. ufc
+  series                                         88.3%  [array:167609] e.g. len=1 ✅
+  startTime                                      76.7%  [str:145539] e.g. 2024-08-18T15:30:00Z
+  volume                                         73.3%  [float:134293, int:4723] e.g. 22067.48
+  automaticallyActive                            72.3%  [bool:137305] e.g. True
+  competitive                                    54.8%  [int:98181, float:5805] e.g. 0
+  liquidityClob                                  54.7%  [int:97528, float:6322] e.g. 0
+  liquidity                                      54.7%  [int:97463, float:6361] e.g. 0
+  liquidityAmm                                   51.4%  [int:97495, float:41] e.g. 0
+  volume1yr                                      51.0%  [float:79205, int:17548] e.g. 0
+  volume1mo                                      50.9%  [float:79125, int:17566] e.g. 0
+  volume1wk                                      50.8%  [float:78881, int:17618] e.g. 0
+
+RARE (<50%)
+------------------------------------------------------------
+  eventDate                                      20.3%  [str:38520] e.g. 2024-08-17
+  eventWeek                                      17.0%  [int:32349] e.g. 1
+  period                                         15.5%  [str:29470] e.g. FT
+  ended                                          15.0%  [bool:28471] e.g. False
+  live                                           15.0%  [bool:28428] e.g. False
+  gameId                                         14.7%  [int:27937] e.g. 10076491
+  score                                          14.3%  [str:27213] e.g. 0-2
+  elapsed                                        11.6%  [str:21984] e.g. 90
+  sortBy                                         10.3%  [str:19560] e.g. price
+  finishedTimestamp                              10.1%  [str:19231] e.g. 2024-09-27T03:18:00Z
+  negRiskMarketID                                 8.0%  [str:15244] e.g. 
+  deployingTimestamp                              6.4%  [str:12141] e.g. 2025-04-29T20:03:21.633642Z
+  volume24hr                                      4.7%  [int:5558, float:3338] e.g. 0
+  gmpChartMode                                    4.2%  [str:7973] e.g. manual
+  cumulativeMarkets                               3.8%  [bool:7154] e.g. False
+  published_at                                    2.8%  [str:5339] e.g. 2022-07-27 14:41:18.863+00
+  parentEventId                                   1.8%  [int:3378] e.g. 44938
+  category                                        1.5%  [str:2837] e.g. Crypto ✅
+  commentsEnabled                                 1.3%  [bool:2496] e.g. False
+  negRiskFeeBips                                  0.5%  [int:999] e.g. 0
+  updatedBy                                       0.3%  [str:646] e.g. 15
+  featuredImage                                   0.3%  [str:526] e.g. 
+  estimateValue                                   0.2%  [bool:443] e.g. False
+  featuredOrder                                   0.2%  [int:399] e.g. 5
+  createdBy                                       0.1%  [str:187] e.g. 15
+  countryName                                     0.1%  [str:171] e.g. Sri Lanka
+  electionType                                    0.1%  [str:168] e.g. Legislative
+  tweetCount                                      0.1%  [int:159] e.g. 413
+  eventCreators                                   0.1%  [array:127] e.g. len=1
+  spreadsMainLine                                 0.1%  [float:99] e.g. 8.5
+  totalsMainLine                                  0.1%  [float:99] e.g. 231.5
+  turnProviderId                                  0.0%  [str:75] e.g. 35
+  subcategory                                     0.0%  [str:68] e.g. 
+  disqusThread                                    0.0%  [str:51] e.g. rnom
+  sportsradarMatchId                              0.0%  [str:47] e.g. 1071d7cb-0fe9-49c2-9296-c2f8a5e25ad2
+  cantEstimate                                    0.0%  [bool:26] e.g. False
+  gameStatus                                      0.0%  [str:24] e.g. rescheduled
+  color                                           0.0%  [str:22] e.g. #DEE9FF,#3064CA
+  estimatedValue                                  0.0%  [str:19] e.g. 21.50375187593797
+  eventMetadata                                   0.0%  [object:14]
+  carouselMap                                     0.0%  [str:4] e.g. {"439": 3}
+
+================================================================================
+ MARKET SCHEMA (442877 records analyzed)
+================================================================================
+
+ALWAYS PRESENT (100%)
+------------------------------------------------------------
+  id                                            100.0%  [str:442877] e.g. 36
+  question                                      100.0%  [str:442877] e.g. What will the price of Bitcoin be on November 4th,
+  conditionId                                   100.0%  [str:442877] e.g. 0xd903891c2b9046cae14615afc4c5245370143503f7b2dfc1
+  slug                                          100.0%  [str:442877] e.g. will-kim-kardashian-and-kanye-west-divorce-before-
+  description                                   100.0%  [str:442877] e.g. This is a scalar market on what the USD price of B
+  outcomes                                      100.0%  [str:442877] e.g. ["Yes", "No"]
+  active                                        100.0%  [bool:442877] e.g. False
+  closed                                        100.0%  [bool:442877] e.g. False
+  marketMakerAddress                            100.0%  [str:442877] e.g. 0x13064324dFF1e76062975345d255EFccc6C78bd0
+  createdAt                                     100.0%  [str:442877] e.g. 2020-10-02T19:20:04.249Z
+  archived                                      100.0%  [bool:442877] e.g. False
+  restricted                                    100.0%  [bool:442877] e.g. False
+  ready                                         100.0%  [bool:442877] e.g. False
+  funded                                        100.0%  [bool:442877] e.g. False
+  cyom                                          100.0%  [bool:442877] e.g. False
+  pagerDutyNotificationEnabled                  100.0%  [bool:442877] e.g. False
+  approved                                      100.0%  [bool:442877] e.g. True
+  rewardsMinSize                                100.0%  [int:442849, float:28] e.g. 0
+  rewardsMaxSpread                              100.0%  [int:385866, float:57011] e.g. 0
+  spread                                        100.0%  [float:356528, int:86349] e.g. 0.005
+  bestAsk                                       100.0%  [float:245757, int:197120] e.g. 0.005
+  clearBookOnStart                              100.0%  [bool:442877] e.g. False
+  manualActivation                              100.0%  [bool:442877] e.g. False
+  negRiskOther                                  100.0%  [bool:442877] e.g. False
+  umaResolutionStatuses                         100.0%  [str:442877] e.g. ["proposed", "resolved"]
+  pendingDeployment                             100.0%  [bool:442877] e.g. False
+  deploying                                     100.0%  [bool:442877] e.g. False
+  rfqEnabled                                    100.0%  [bool:442877] e.g. False
+  holdingRewardsEnabled                         100.0%  [bool:442877] e.g. False
+  feesEnabled                                   100.0%  [bool:442877] e.g. False
+  requiresTranslation                           100.0%  [bool:442877] e.g. False
+  new                                           100.0%  [bool:442846] e.g. False
+  updatedAt                                     100.0%  [str:442785] e.g. 2024-04-26T02:45:04.309477Z
+  clobTokenIds                                  100.0%  [str:442699] e.g. ["536781114408285237221412461864122849595525245734
+
+COMMON (90-99%)
+------------------------------------------------------------
+  hasReviewedDates                               99.6%  [bool:440901] e.g. True
+  questionID                                     99.5%  [str:440814] e.g. 0x037496ae4b25d86f905499b45d690ee97c0abefc400bea78
+  enableOrderBook                                99.4%  [bool:440255] e.g. False
+  endDate                                        99.3%  [str:439790] e.g. 2020-11-20T00:00:00Z
+  startDate                                      98.9%  [str:438165] e.g. 2023-06-12T20:58:59.257Z
+  orderMinSize                                   98.9%  [int:438082, float:2] e.g. 15
+  orderPriceMinTickSize                          98.9%  [float:438077, int:5] e.g. 0
+  image                                          98.8%  [str:437761] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  icon                                           98.8%  [str:437536] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  endDateIso                                     98.7%  [str:437241] e.g. 2021-01-02
+  acceptingOrders                                98.1%  [bool:434399] e.g. False
+  negRisk                                        97.7%  [bool:432546] e.g. False
+  outcomePrices                                  96.7%  [str:428414] e.g. ["0.000001024519509568169644816863666886675", "0.9
+  automaticallyActive                            96.7%  [bool:428261] e.g. True
+  featured                                       96.5%  [bool:427225] e.g. False
+  volume                                         93.0%  [str:411739] e.g. 89665.252158
+  volumeNum                                      93.0%  [float:305859, int:105880] e.g. 22067.48
+  startDateIso                                   92.4%  [str:409373] e.g. 2021-01-25
+  volumeClob                                     91.9%  [float:300941, int:106019] e.g. 365.19
+  closedTime                                     90.9%  [str:402591] e.g. 2020-12-11 20:53:24+00
+  umaResolutionStatus                            90.3%  [str:400033] e.g. resolved
+  umaEndDate                                     90.3%  [str:400010] e.g. 2023-07-12 16:33:04+00
+
+FREQUENT (50-89%)
+------------------------------------------------------------
+  automaticallyResolved                          88.3%  [bool:391199] e.g. True ✅
+  lastTradePrice                                 87.0%  [int:249259, float:135903] e.g. 0 ✅
+  groupItemThreshold                             86.9%  [str:384837] e.g. 4
+  acceptingOrdersTimestamp                       86.9%  [str:384657] e.g. 2024-05-01T20:07:36Z ✅
+  resolutionSource                               83.1%  [str:367838] e.g. coingecko.com ✅
+  resolvedBy                                     78.1%  [str:346006] e.g. 0x6A9D222616C90FcA5754cd1333cFD9b7fb6a4F74 ✅
+  volume1yr                                      76.2%  [float:209242, int:128308] e.g. 0
+  volume1yrClob                                  76.2%  [float:209242, int:128308] e.g. 0
+  volume1mo                                      76.1%  [float:208486, int:128627] e.g. 0
+  volume1moClob                                  76.1%  [float:208486, int:128627] e.g. 0
+  volume1wk                                      75.5%  [float:204872, int:129550] e.g. 0
+  volume1wkClob                                  75.5%  [float:204872, int:129550] e.g. 0
+  submitted_by                                   74.8%  [str:331166] e.g. ✅
+  oneDayPriceChange                              73.4%  [float:238799, int:86475] e.g. 0 ✅
+  umaBond                                        73.3%  [str:324534] e.g. 500.0
+  umaReward                                      73.3%  [str:324534] e.g. 5.0
+  negRiskRequestID                               70.7%  [str:313088] e.g. 0x9fcded281e9e9425d0a673245b0ca8f4c269af8471378fd8
+  groupItemTitle                                 67.7%  [str:299842] e.g. More than -0.1%
+  deployingTimestamp                             66.5%  [str:294461] e.g. 2025-09-23T19:21:09.85644Z
+  customLiveness                                 64.4%  [int:285034] e.g. 0
+  bestBid                                        59.4%  [float:176737, int:86483] e.g. 0
+  oneHourPriceChange                             53.9%  [float:126180, int:112645] e.g. 0
+
+RARE (<50%)
+------------------------------------------------------------
+  competitive                                    49.5%  [int:193858, float:25178] e.g. 0 ✅
+  liquidity                                      49.4%  [str:218995] e.g. 0 
+  liquidityNum                                   49.4%  [int:189373, float:29622] e.g. 0 
+  liquidityClob                                  48.3%  [int:187894, float:26055] e.g. 0
+  showGmpOutcome                                 44.4%  [bool:196522] e.g. False
+  showGmpSeries                                  44.4%  [bool:196521] e.g. False
+  liquidityAmm                                   42.7%  [int:188045, float:894] e.g. 0
+  oneWeekPriceChange                             42.0%  [int:112645, float:73525] e.g. 0
+  secondsDelay                                   40.0%  [int:177351] e.g. 0
+  gameStartTime                                  38.9%  [str:172464] e.g. 2022-06-03 01:00:00+00
+  sportsMarketType                               31.8%  [str:140909] e.g. totals
+  eventStartTime                                 31.0%  [str:137088] e.g. 2025-06-17T04:00:00Z
+  oneMonthPriceChange                            29.8%  [int:112645, float:19278] e.g. 0
+  negRiskMarketID                                26.9%  [str:119304] e.g. 0xe3b1bc389210504ebcb9cffe4b0ed06ccac50561e0f24abb
+  oneYearPriceChange                             25.5%  [int:112645, float:84] e.g. 0
+  volume1wkAmm                                   25.4%  [int:112645] e.g. 0
+  volume1moAmm                                   25.4%  [int:112645] e.g. 0
+  volume1yrAmm                                   25.4%  [int:112645] e.g. 0
+  volume24hr                                     21.6%  [int:85216, float:10551] e.g. 0
+  line                                           20.8%  [float:90566, int:1743] e.g. 9.5
+  volume24hrClob                                 20.5%  [int:80429, float:10559] e.g. 0
+  volumeAmm                                      17.8%  [int:77897, float:979] e.g. 0
+  volume24hrAmm                                  17.8%  [int:78612] e.g. 0
+  seriesColor                                    10.8%  [str:47660] e.g. 
+  fpmmLive                                        6.2%  [bool:27365] e.g. False
+  wideFormat                                      6.0%  [bool:26669] e.g. False
+  fee                                             6.0%  [str:26659] e.g. 1000000000000000
+  readyForCron                                    5.2%  [bool:22977] e.g. False
+  sentDiscord                                     4.7%  [bool:20604] e.g. False
+  notificationsEnabled                            4.2%  [bool:18402] e.g. False
+  gameId                                          4.0%  [str:17657] e.g. 0x17b993ce5836f6f3a7c84e24dc7f27ba980a8a030f8ce8d1
+  takerBaseFee                                    3.4%  [int:15055] e.g. 0
+  makerBaseFee                                    3.4%  [int:15054] e.g. 0
+  clobRewards                                     2.8%  [array:12302]
+  makerRebatesFeeShareBps                         2.6%  [int:11325] e.g. 10000
+  marketType                                      2.5%  [str:10902] e.g. scalar
+  creator                                         2.5%  [str:10902] e.g. 
+  commentsEnabled                                 1.5%  [bool:6555] e.g. False
+  updatedBy                                       1.3%  [int:5943] e.g. 126
+  umaEndDateIso                                   1.2%  [str:5231] e.g. 2022-05-06
+  category                                        1.0%  [str:4400] e.g. Crypto
+  twitterCardLocation                             0.7%  [str:3073] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  twitterCardLastRefreshed                        0.7%  [str:3050] e.g. 1633113633936
+  mailchimpTag                                    0.6%  [str:2689] e.g. 4102440
+  marketGroup                                     0.5%  [int:2183] e.g. 4
+  twitterCardLastValidated                        0.3%  [str:1477] e.g. 1633113227.5404696
+  categoryMailchimpTag                            0.1%  [str:311] e.g. null
+  groupItemRange                                  0.0%  [str:185] e.g. ["100000000000", "200000000000"]
+  disqusThread                                    0.0%  [str:77] e.g. rnom
+  subcategory                                     0.0%  [str:74] e.g. Round 1 - Raptors vs. Bucks
+  lowerBound                                      0.0%  [str:73] e.g. 9000000
+  upperBound                                      0.0%  [str:72] e.g. 15000
+  formatType                                      0.0%  [str:66] e.g. decimal
+  twitterCardImage                                0.0%  [str:62] e.g. https://polymarket-static.s3.us-east-2.amazonaws.c
+  teamAID                                         0.0%  [str:15] e.g. 4
+  teamBID                                         0.0%  [str:15] e.g. 7
+  sponsorImage                                    0.0%  [str:2] e.g. 
+  denominationToken                               0.0%  [str:1] e.g. 
+  createdBy                                       0.0%  [int:1] e.g. 15
+
+================================================================================
+ SERIES SCHEMA (167609 records analyzed)
+================================================================================
+
+ALWAYS PRESENT (100%)
+------------------------------------------------------------
+  id                                            100.0%  [str:167609] e.g. 45
+  ticker                                        100.0%  [str:167609] e.g. btc-multi-strikes-weekly
+  slug                                          100.0%  [str:167609] e.g. btc-multi-strikes-weekly
+  title                                         100.0%  [str:167609] e.g. UFC
+  active                                        100.0%  [bool:167609] e.g. True
+  closed                                        100.0%  [bool:167609] e.g. False
+  archived                                      100.0%  [bool:167609] e.g. False
+  createdAt                                     100.0%  [str:167609] e.g. 2022-10-13T00:37:01.013Z
+  updatedAt                                     100.0%  [str:167609] e.g. 2026-02-05T14:34:01.866496Z
+  commentCount                                  100.0%  [int:167609] e.g. 1299
+  requiresTranslation                           100.0%  [bool:167609] e.g. False
+  seriesType                                    100.0%  [str:167539] e.g. single
+  recurrence                                    100.0%  [str:167539] e.g. weekly
+
+FREQUENT (50-89%)
+------------------------------------------------------------
+  featured                                       81.3%  [bool:136330] e.g. False
+  restricted                                     80.8%  [bool:135440] e.g. True
+  image                                          80.7%  [str:135231] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  icon                                           80.7%  [str:135231] e.g. https://polymarket-upload.s3.us-east-2.amazonaws.c
+  volume24hr                                     67.7%  [float:112957, int:495] e.g. 6309952.710568998
+  liquidity                                      64.9%  [float:108828] e.g. 705189.42807
+  volume                                         64.9%  [float:108649, int:84] e.g. 8742736.546977
+
+RARE (<50%)
+------------------------------------------------------------
+  new                                             7.1%  [bool:11912] e.g. False
+  layout                                          4.9%  [str:8233] e.g. default
+  publishedAt                                     4.9%  [str:8191] e.g. 2023-03-08 16:15:53.316+00
+  commentsEnabled                                 4.9%  [bool:8191] e.g. False
+  competitive                                     4.9%  [str:8191] e.g. 0
+  createdBy                                       4.8%  [str:8075] e.g. 15
+  updatedBy                                       4.8%  [str:8075] e.g. 15
+  startDate                                       4.4%  [str:7318] e.g. 2023-07-01T19:00:00Z
+  description                                     0.4%  [str:647] e.g. NFL
+  subtitle                                        0.4%  [str:591] e.g. BTC
+  pythTokenID                                     0.4%  [str:591] e.g. 0xe62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc65
+  cgAssetName                                     0.4%  [str:591] e.g. ethereum
+
+================================================================================
+ TAG SCHEMA (1151778 records analyzed)
+================================================================================
+
+ALWAYS PRESENT (100%)
+------------------------------------------------------------
+  id                                            100.0%  [str:1151778] e.g. 100215
+  label                                         100.0%  [str:1151778] e.g. New Years
+  slug                                          100.0%  [str:1151778] e.g. all
+  requiresTranslation                           100.0%  [bool:1151778] e.g. False
+  updatedAt                                     100.0%  [str:1151750] e.g. 2026-01-24T21:14:37.368585Z
+
+COMMON (90-99%)
+------------------------------------------------------------
+  createdAt                                      99.1%  [str:1141840] e.g. 2023-11-02T21:03:41.713Z
+
+FREQUENT (50-89%)
+------------------------------------------------------------
+  forceShow                                      89.7%  [bool:1032801] e.g. False
+
+RARE (<50%)
+------------------------------------------------------------
+  publishedAt                                    40.0%  [str:460670] e.g. 2023-11-02 21:03:41.709+00
+  isCarousel                                     33.3%  [bool:384022] e.g. False
+  updatedBy                                      32.5%  [int:374844] e.g. 15
+  createdBy                                      10.8%  [int:124163] e.g. 15
+  forceHide                                       7.5%  [bool:86802] e.g. False
+
+================================================================================
+ CATEGORY SCHEMA (0 records analyzed)
+================================================================================
+
+================================================================================
+ COLLECTION SCHEMA (0 records analyzed)
+================================================================================
+
+================================================================================
+ CHAT SCHEMA (0 records analyzed)
+================================================================================
+
+================================================================================
+ EVENTCREATOR SCHEMA (127 records analyzed)
+================================================================================
+
+ALWAYS PRESENT (100%)
+------------------------------------------------------------
+  id                                            100.0%  [str:127] e.g. 4
+  creatorName                                   100.0%  [str:127] e.g. zerohedge
+  creatorHandle                                 100.0%  [str:127] e.g. NateSilver538
+  creatorUrl                                    100.0%  [str:127] e.g. https://x.com/typesfast
+  creatorImage                                  100.0%  [str:127] e.g. https://pbs.twimg.com/profile_images/1905038055935
+  createdAt                                     100.0%  [str:127] e.g. 2024-10-22T16:00:51.444643Z
+
+================================================================================
+ TEMPLATE SCHEMA (0 records analyzed)
+================================================================================
+
+================================================================================
+ IMAGEOPTIMIZED SCHEMA (0 records analyzed)
+================================================================================
+
+================================================================================
+ SQL SCHEMAS (fields present in >= 90% of records)
+================================================================================
+
+-- Events
+CREATE TABLE events (
+    id STRING NOT NULL,
+    slug STRING NOT NULL,
+    title STRING NOT NULL,
+    image STRING NOT NULL,
+    icon STRING NOT NULL,
+    active BOOLEAN NOT NULL,
+    closed BOOLEAN NOT NULL,
+    createdAt TIMESTAMP NOT NULL,
+    cyom BOOLEAN NOT NULL,
+    showAllOutcomes BOOLEAN NOT NULL,
+    showMarketImages BOOLEAN NOT NULL,
+    enableNegRisk BOOLEAN NOT NULL,
+    negRiskAugmented BOOLEAN NOT NULL,
+    pendingDeployment BOOLEAN NOT NULL,
+    deploying BOOLEAN NOT NULL,
+    requiresTranslation BOOLEAN NOT NULL,
+    ticker STRING NOT NULL,
+    archived BOOLEAN NOT NULL,
+    restricted BOOLEAN NOT NULL,
+    featured BOOLEAN NOT NULL,
+    new BOOLEAN NOT NULL,
+    updatedAt TIMESTAMP NOT NULL,
+    startDate TIMESTAMP NOT NULL,
+    endDate TIMESTAMP NOT NULL,
+    creationDate TIMESTAMP,
+    description STRING,
+    commentCount BIGINT,
+    openInterest BIGINT,
+    enableOrderBook BOOLEAN,
+    closedTime TIMESTAMP,
+    automaticallyResolved BOOLEAN,
+    negRisk BOOLEAN,
+    resolutionSource STRING,
+    -- Force-included fields (below 90% threshold)
+    seriesSlug STRING,              -- 88.3%
+    category STRING                 -- 1.5%
+);
+
+-- Markets
+CREATE TABLE markets (
+    id STRING NOT NULL,
+    question STRING NOT NULL,
+    conditionId STRING NOT NULL,
+    slug STRING NOT NULL,
+    description STRING NOT NULL,
+    outcomes STRING NOT NULL,
+    active BOOLEAN NOT NULL,
+    closed BOOLEAN NOT NULL,
+    marketMakerAddress STRING NOT NULL,
+    createdAt TIMESTAMP NOT NULL,
+    archived BOOLEAN NOT NULL,
+    restricted BOOLEAN NOT NULL,
+    ready BOOLEAN NOT NULL,
+    funded BOOLEAN NOT NULL,
+    cyom BOOLEAN NOT NULL,
+    pagerDutyNotificationEnabled BOOLEAN NOT NULL,
+    approved BOOLEAN NOT NULL,
+    rewardsMinSize DOUBLE NOT NULL,
+    rewardsMaxSpread DOUBLE NOT NULL,
+    spread DOUBLE NOT NULL,
+    bestAsk DOUBLE NOT NULL,
+    clearBookOnStart BOOLEAN NOT NULL,
+    manualActivation BOOLEAN NOT NULL,
+    negRiskOther BOOLEAN NOT NULL,
+    umaResolutionStatuses STRING NOT NULL,
+    pendingDeployment BOOLEAN NOT NULL,
+    deploying BOOLEAN NOT NULL,
+    rfqEnabled BOOLEAN NOT NULL,
+    holdingRewardsEnabled BOOLEAN NOT NULL,
+    feesEnabled BOOLEAN NOT NULL,
+    requiresTranslation BOOLEAN NOT NULL,
+    new BOOLEAN NOT NULL,
+    updatedAt TIMESTAMP NOT NULL,
+    clobTokenIds STRING NOT NULL,
+    hasReviewedDates BOOLEAN,
+    questionID STRING,
+    enableOrderBook BOOLEAN,
+    endDate TIMESTAMP,
+    startDate TIMESTAMP,
+    orderMinSize DOUBLE,
+    orderPriceMinTickSize DOUBLE,
+    image STRING,
+    icon STRING,
+    endDateIso STRING,
+    acceptingOrders BOOLEAN,
+    negRisk BOOLEAN,
+    outcomePrices STRING,
+    automaticallyActive BOOLEAN,
+    featured BOOLEAN,
+    volume STRING,
+    volumeNum DOUBLE,
+    startDateIso STRING,
+    volumeClob DOUBLE,
+    closedTime TIMESTAMP,
+    umaResolutionStatus STRING,
+    umaEndDate TIMESTAMP,
+    -- Force-included fields (below 90% threshold)
+    automaticallyResolved BOOLEAN,       -- 88.3%
+    lastTradePrice DOUBLE,               -- 87.0%
+    acceptingOrdersTimestamp TIMESTAMP,  -- 86.9%
+    resolutionSource STRING,             -- 83.1%
+    resolvedBy STRING,                   -- 78.1%
+    submitted_by STRING,                 -- 74.8%
+    oneDayPriceChange DOUBLE,            -- 73.4%
+    competitive DOUBLE                   -- 49.5%
+);
+
+-- Series
+CREATE TABLE series (
+    id STRING NOT NULL,
+    ticker STRING NOT NULL,
+    slug STRING NOT NULL,
+    title STRING NOT NULL,
+    active BOOLEAN NOT NULL,
+    closed BOOLEAN NOT NULL,
+    archived BOOLEAN NOT NULL,
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NOT NULL,
+    commentCount BIGINT NOT NULL,
+    requiresTranslation BOOLEAN NOT NULL,
+    seriesType STRING NOT NULL,
+    recurrence STRING NOT NULL
+);
+
+-- Tags
+CREATE TABLE tags (
+    id STRING NOT NULL,
+    label STRING NOT NULL,
+    slug STRING NOT NULL,
+    requiresTranslation BOOLEAN NOT NULL,
+    updatedAt TIMESTAMP NOT NULL,
+    createdAt TIMESTAMP
+);
+
+-- EventCreators
+CREATE TABLE event_creators (
+    id STRING NOT NULL,
+    creatorName STRING NOT NULL,
+    creatorHandle STRING NOT NULL,
+    creatorUrl STRING NOT NULL,
+    creatorImage STRING NOT NULL,
+    createdAt TIMESTAMP NOT NULL
+);

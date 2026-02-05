@@ -1,0 +1,171 @@
+# Events Bronze to Silver Schema
+
+## Event
+
+- `id`: `"45377"`
+- `ticker`: `"xrp-up-or-down-september-18-8am-et"`
+- `slug`: `"xrp-up-or-down-september-18-8am-et"`
+- `title`: `"XRP Up or Down - September 18, 8AM ET"`
+- `description`: `"This market will resolve to \"Up\" if the close price is..."`
+- `resolutionSource`: `"https://www.binance.com/en/trade/XRP_USDT"`
+- `startDate`: `"2025-09-16T12:13:29.94066Z"`
+- `creationDate`: `"2025-09-16T12:13:29.940655Z"`
+- `endDate`: `"2025-09-18T13:00:00Z"`
+- `image`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP-logo.png"`
+- `icon`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP-logo.png"`
+- `active`: `true`
+- `closed`: `true`
+- `archived`: `false`
+- `new`: `false`
+- `featured`: `false`
+- `restricted`: `true`
+- `volume`: `13126.461952`
+- `openInterest`: `0`
+- `createdAt`: `"2025-09-16T12:00:01.118102Z"`
+- `updatedAt`: `"2025-09-19T16:45:38.655791Z"`
+- `volume1wk`: `13126.461952`
+- `volume1mo`: `13126.461952`
+- `volume1yr`: `13126.461952`
+- `enableOrderBook`: `true`
+- `negRisk`: `false`
+- `commentCount`: `83`
+- `markets`: `[...]`
+- `series`: `[...]`
+- `tags`: `[...]`
+- `cyom`: `false`
+- `closedTime`: `"2025-09-18T14:09:10Z"`
+- `showAllOutcomes`: `true`
+- `showMarketImages`: `false`
+- `automaticallyResolved`: `true`
+- `enableNegRisk`: `false`
+- `automaticallyActive`: `true`
+- `startTime`: `"2025-09-18T12:00:00Z"`
+- `seriesSlug`: `"xrp-up-or-down-hourly"`
+- `negRiskAugmented`: `false`
+- `pendingDeployment`: `false`
+- `deploying`: `false`
+- `requiresTranslation`: `false`
+
+---
+
+## Market
+
+- `id`: `"600268"`
+- `question`: `"XRP Up or Down - September 18, 8AM ET"`
+- `conditionId`: `"0x849ae878890bf2c40959fbc3b789d7a7356420c857ebadcf6ac72b8243d95e8c"`
+- `slug`: `"xrp-up-or-down-september-18-8am-et"`
+- `resolutionSource`: `"https://www.binance.com/en/trade/XRP_USDT"`
+- `endDate`: `"2025-09-18T13:00:00Z"`
+- `startDate`: `"2025-09-16T12:01:08.242Z"`
+- `image`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP-logo.png"`
+- `icon`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP-logo.png"`
+- `description`: `"This market will resolve to \"Up\" if the close price is..."`
+- `outcomes`: `"[\"Up\", \"Down\"]"`
+- `outcomePrices`: `"[\"0\", \"1\"]"`
+- `volume`: `"13126.461952"`
+- `active`: `true`
+- `closed`: `true`
+- `marketMakerAddress`: `""`
+- `createdAt`: `"2025-09-16T12:00:01.43894Z"`
+- `updatedAt`: `"2025-09-19T16:45:25.496268Z"`
+- `closedTime`: `"2025-09-18 14:09:10+00"`
+- `new`: `false`
+- `featured`: `false`
+- `submitted_by`: `"0x91430CaD2d3975766499717fA0D66A78D814E5c5"`
+- `archived`: `false`
+- `resolvedBy`: `"0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7"`
+- `restricted`: `true`
+- `groupItemThreshold`: `"0"`
+- `questionID`: `"0x00b55c4e2b8ee8ad91f873c91221e0096f5285acff0f60ad4aef22d74af25c02"`
+- `umaEndDate`: `"2025-09-18T14:09:10Z"`
+- `enableOrderBook`: `true`
+- `orderPriceMinTickSize`: `0.001`
+- `orderMinSize`: `5`
+- `umaResolutionStatus`: `"resolved"`
+- `volumeNum`: `13126.461952`
+- `endDateIso`: `"2025-09-18"`
+- `startDateIso`: `"2025-09-16"`
+- `hasReviewedDates`: `true`
+- `volume1wk`: `13126.461952`
+- `volume1mo`: `13126.461952`
+- `volume1yr`: `13126.461952`
+- `clobTokenIds`: `"[\"73587171186056717282064970174129714948391029090555353808741789039613320046207\", ...]"`
+- `umaBond`: `"500"`
+- `umaReward`: `"5"`
+- `volume1wkClob`: `13126.461952`
+- `volume1moClob`: `13126.461952`
+- `volume1yrClob`: `13126.461952`
+- `volumeClob`: `13126.461952`
+- `customLiveness`: `3600`
+- `acceptingOrders`: `false`
+- `negRisk`: `false`
+- `negRiskRequestID`: `""`
+- `ready`: `false`
+- `funded`: `false`
+- `acceptingOrdersTimestamp`: `"2025-09-16T12:00:48Z"`
+- `cyom`: `false`
+- `pagerDutyNotificationEnabled`: `false`
+- `approved`: `true`
+- `rewardsMinSize`: `0`
+- `rewardsMaxSpread`: `0`
+- `spread`: `0.001`
+- `automaticallyResolved`: `true`
+- `oneDayPriceChange`: `-0.4995`
+- `oneHourPriceChange`: `-0.1095`
+- `lastTradePrice`: `1`
+- `bestAsk`: `0.001`
+- `automaticallyActive`: `true`
+- `clearBookOnStart`: `true`
+- `manualActivation`: `false`
+- `negRiskOther`: `false`
+- `umaResolutionStatuses`: `"[\"proposed\"]"`
+- `pendingDeployment`: `false`
+- `deploying`: `false`
+- `deployingTimestamp`: `"2025-09-16T12:00:17.639679Z"`
+- `rfqEnabled`: `false`
+- `eventStartTime`: `"2025-09-18T12:00:00Z"`
+- `holdingRewardsEnabled`: `false`
+- `feesEnabled`: `false`
+- `requiresTranslation`: `false`
+
+---
+
+## Series
+
+- `id`: `"10123"`
+- `ticker`: `"xrp-up-or-down-hourly"`
+- `slug`: `"xrp-up-or-down-hourly"`
+- `title`: `"XRP Up or Down Hourly"`
+- `seriesType`: `"single"`
+- `recurrence`: `"hourly"`
+- `image`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP+TICKER.PNG"`
+- `icon`: `"https://polymarket-upload.s3.us-east-2.amazonaws.com/XRP+TICKER.PNG"`
+- `active`: `true`
+- `closed`: `false`
+- `archived`: `false`
+- `featured`: `false`
+- `restricted`: `true`
+- `createdAt`: `"2025-06-09T13:54:09.424288Z"`
+- `updatedAt`: `"2026-02-05T14:29:27.436877Z"`
+- `volume24hr`: `322121.9628870002`
+- `volume`: `37486.512525`
+- `liquidity`: `1202871.77188`
+- `commentCount`: `224`
+- `requiresTranslation`: `false`
+
+---
+
+## Tag
+
+- `id`: `"101267"`
+- `label`: `"XRP"`
+- `slug`: `"xrp"`
+- `forceShow`: `false`
+- `forceHide`: `true`
+- `isCarousel`: `false`
+- `publishedAt`: `"2023-11-02 21:03:54.55+00"`
+- `createdBy`: `123`
+- `updatedBy`: `15`
+- `createdAt`: `"2024-11-15T19:19:02.580517Z"`
+- `updatedAt`: `"2026-01-24T21:13:13.690892Z"`
+- `requiresTranslation`: `false`
