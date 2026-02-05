@@ -12,11 +12,11 @@ The output will be a succession of json arrays of size at most 100.
 
 Save the output to:
 
-`abfss://bronze@datalakeprod.dfs.core.windows.net/polymarket/events/mode=backfill/ingest_date=2026-02-04/offset=<offset written on 10 digits>_limit=500.jsonl`
+`abfss://bronze@datalakeprod.dfs.core.windows.net/polymarket/events/mode=backfill/ingest_date=2026-02-04/offset=<offset written on 5 digits>_limit=500.jsonl`
 
 ## Polling management
 
-We'll have a delta table: "meta.backfill_jobs_events" with the following schema:
+We'll have a delta table: "abfss://polypoly@polybotdlso94zgo.dfs.core.windows.net/bronze/_meta/backfill_jobs_events" with the following schema:
 
 - job_id STRING
 Deterministic: "offset=12500&limit=500" 
