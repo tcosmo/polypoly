@@ -98,3 +98,6 @@ bin/
 obj/
 appsettings.*.json
 .azure/
+
+# Data files (CSVs, bulk extracts)
+data/
