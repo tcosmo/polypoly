@@ -2,8 +2,9 @@
 Extract Polymarket user activity to CSV.
 
 Usage:
-    python user.py --user 0x1234...abcd
-    python user.py --user 0x1234...abcd --output my_activity.csv --limit 2000
+    python user.py --user 0x1234...abcd                          # fetch all activity
+    python user.py --user 0x1234...abcd --output my_activity.csv # custom output file
+    python user.py --user 0x1234...abcd --limit 2000             # cap at 2000 rows
 """
 from __future__ import annotations
 
@@ -20,30 +21,57 @@ ACTIVITY_API = "https://data-api.polymarket.com/activity"
 OUTPUT_FIELDS = ["type", "market", "outcome", "price", "shares", "amount", "date"]
 
 PAGE_SIZE = 500  # API max per request
+OFFSET_CEILING = 3000  # reset before hitting API offset cap via time-windowing
 
 
-def fetch_activity(user: str, total: int = 1000) -> list[dict]:
+def fetch_activity(user: str, total: int | None = None) -> list[dict]:
     """Fetch user activity with pagination.
+
+    Uses timestamp windowing to work around the API offset cap so any
+    amount of history can be retrieved.
 
     Args:
         user: Polymarket user address (0x...).
-        total: Total number of activities to fetch (up to 10000).
+        total: Maximum activities to fetch.  ``None`` means fetch all.
 
     Returns:
         List of activity dicts.
     """
     all_activities: list[dict] = []
     offset = 0
+    end_ts: int | None = None  # upper-bound timestamp for current window
 
-    while offset < total:
-        limit = min(PAGE_SIZE, total - offset)
-        params = {"user": user, "limit": limit, "offset": offset}
+    while total is None or len(all_activities) < total:
+        want = (total - len(all_activities)) if total else PAGE_SIZE
+        limit = min(PAGE_SIZE, want)
 
-        print(f"  Fetching offset={offset}, limit={limit}...", end="\r")
-        resp = requests.get(ACTIVITY_API, params=params, timeout=30)
-        resp.raise_for_status()
+        params: dict = {"user": user, "limit": limit, "offset": offset}
+        if end_ts is not None:
+            params["end"] = end_ts
+
+        label = f"  Fetching offset={offset} limit={limit}"
+        if end_ts is not None:
+            label += f" end={end_ts}"
+        print(label, end="\r", flush=True)
+
+        try:
+            resp = requests.get(ACTIVITY_API, params=params, timeout=30)
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError:
+            # If offset is too large the API returns 400 — start a new
+            # time window from the oldest timestamp we have so far.
+            if resp.status_code == 400 and offset > 0 and all_activities:
+                min_ts = min(
+                    int(a["timestamp"])
+                    for a in all_activities
+                    if a.get("timestamp")
+                )
+                end_ts = min_ts - 1
+                offset = 0
+                continue
+            raise
+
         batch = resp.json()
-
         if not isinstance(batch, list) or len(batch) == 0:
             break
 
@@ -54,7 +82,13 @@ def fetch_activity(user: str, total: int = 1000) -> list[dict]:
 
         offset += limit
 
-    print(f"  Fetched {len(all_activities)} activities total.")
+        # Proactively open a new time window before reaching the offset cap.
+        if offset >= OFFSET_CEILING and batch:
+            min_ts = min(int(a["timestamp"]) for a in batch if a.get("timestamp"))
+            end_ts = min_ts - 1
+            offset = 0
+
+    print(f"  Fetched {len(all_activities)} activities total.          ")
     return all_activities
 
 
@@ -113,14 +147,14 @@ def main():
         "--limit",
         "-l",
         type=int,
-        default=1000,
-        help="Total activities to fetch, up to 10000 (default: 1000)",
+        default=None,
+        help="Max activities to fetch (default: all)",
     )
 
     args = parser.parse_args()
 
-    if args.limit < 1 or args.limit > 10000:
-        parser.error("--limit must be between 1 and 10000")
+    if args.limit is not None and args.limit < 1:
+        parser.error("--limit must be a positive integer")
 
     output = args.output or f"{args.user}.csv"
 
