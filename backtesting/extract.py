@@ -20,8 +20,14 @@ import sys
 import time
 from pathlib import Path
 
-# Import from root backtest.py
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Import from root backtest.py (polypoly/backtest.py)
+_root = str(Path(__file__).resolve().parent.parent)
+if _root not in sys.path:
+    sys.path.insert(0, _root)
+# Remove script dir so we don't shadow root backtest with backtesting/backtest.py
+_script_dir = str(Path(__file__).resolve().parent)
+if _script_dir in sys.path:
+    sys.path.remove(_script_dir)
 from backtest import (
     Timeline,
     PolymarketClient,
