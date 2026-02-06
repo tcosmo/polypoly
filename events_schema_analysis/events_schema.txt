@@ -57,7 +57,7 @@ COMMON (90-99%)
 
 FREQUENT (50-89%)
 ------------------------------------------------------------
-  seriesSlug                                     88.3%  [str:167657] e.g. ufc
+  seriesSlug                                     88.3%  [str:167657] e.g. ufc ✅ (added afterwards for linking with series table)
   series                                         88.3%  [array:167609] e.g. len=1 ✅
   startTime                                      76.7%  [str:145539] e.g. 2024-08-18T15:30:00Z
   volume                                         73.3%  [float:134293, int:4723] e.g. 22067.48
